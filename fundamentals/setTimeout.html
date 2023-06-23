@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeout</title>
+</head>
+<body>
+    <script>
+
+        const timeOut = setTimeout(() => {
+            console.log('Executed')
+        }, 5000  )
+
+
+        setTimeout(() => {
+            clearTimeout(timeOut)
+        }, 2000)
+
+
+
+        // Example using setTimeout with setInterval
+        
+        // const interval = setInterval(() => {
+        //     console.log('Executed')
+        // }, 5000  )
+
+
+        // setTimeout(() => {
+        //     clearInterval(interval)
+        // }, 2000)
+
+
+        
+        
+        // Example using setTimeout and setInterval
+
+        // setTimeout(() => {
+        //     console.log('Executed')
+        // }, 1000)
+
+        // setInterval(() => {
+        //     console.log('Interval executed')
+        // }, 3000)
+
+        
+    </script>    
+</body>
+</html>

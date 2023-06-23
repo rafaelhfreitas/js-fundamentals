@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desestruturando array</title>
+</head>
+<body>
+    <script>
+        const fruits = ['banana', 'strawberry', 'mango']
+        const person = {name: 'Rafael', age: 39}
+        const person2 = {name: 'Rafael Henrique', age: 39}
+        const person3 = {name: 'Rafael Freitas', age: 39}
+
+
+        const friends = [person, person2, person3]
+
+        const secondPerson = friends[1]
+        // const name = secondPerson.name
+
+        const [, {name }] = friends;
+
+        const firstItem = fruits[0]
+        const secondItem = fruits[1]
+
+        const [, secondItemNew] = fruits
+        // const [firstItemNew, secondItemNew] = fruits
+
+        const chart = [[1,2], [3,4], [5,6]]
+        const [,[,z]] = chart
+        const [,,[x,y]] = chart
+
+
+        console.log(y)
+    </script>    
+</body>
+</html>

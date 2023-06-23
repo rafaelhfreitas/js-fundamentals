@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desestruturando objetos</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name: 'Rafael',
+            age: 39,
+            contact: {
+                email: 'rafael@teste.com.br'
+            }
+        }
+
+        const { name, age , contact: {email} } = person
+
+        console.log(`Olá ${name}, idade: ${age}, email: ${email}`)
+
+    </script>    
+</body>
+</html>

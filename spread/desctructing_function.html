@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desestruturando parametros e retorno de funções</title>
+</head>
+<body>
+    <script>
+        function createUser(name, age, email) {
+            return {
+                name,
+                age,
+                contact: { email }
+            }
+        }
+
+        function createUserObject(user) {
+            return {
+                name: user.name,
+                age: user.age,
+                contact: { email: user.email }
+            }
+        }
+
+
+        function createUserObjectWithDesctructing({name, age, email}) {
+            return {
+                name,
+                age,
+                contact: { email }
+            }
+        }
+
+        const {name, contact: {email}} = createUser('Rafael', 32 , 'teste@teste.com')
+
+        const user = {name: 'Rafael de Freitas', age: 39, email: 'teste@teste.com'}
+
+        const newUser = createUserObject(user)
+
+        const user2 = {name: 'Viviane de Freitas', age: 39, email: 'viviane@teste.com'}
+
+        const newUserD = createUserObjectWithDesctructing(user2)
+
+        console.log(newUserD)
+        
+    </script>    
+</body>
+</html>
